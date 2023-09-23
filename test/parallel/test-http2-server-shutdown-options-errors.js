@@ -19,7 +19,7 @@ const types = [
 server.on('stream', common.mustCall((stream) => {
   const session = stream.session;
 
-  for(const input in types) {
+  for (const input in types) {
     const received = common.invalidArgTypeHelper(input);
     assert.throws(
       () => session.goaway(input),
